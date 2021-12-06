@@ -1,5 +1,5 @@
-import Sequelize, { DATE } from "sequelize";
-import { sequelize } from "../db/dbConnection.js";
+import Sequelize from "sequelize";
+import { sequelize } from "../db/dbConnect.js";
 
 const Appointment = sequelize.define('appointment', {
 
@@ -16,7 +16,7 @@ const Appointment = sequelize.define('appointment', {
     },
 
     Appointment_Date: {
-        type: DATE,
+        type: Sequelize.INTEGER(255),
         allowNull: false
     },
 

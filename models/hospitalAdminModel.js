@@ -1,5 +1,5 @@
 import Sequelize from "sequelize";
-import { sequelize } from "../db/dbConnection.js";
+import { sequelize } from "../db/dbConnect.js";
 
 const Admin = sequelize.define('admin', {
 
@@ -32,7 +32,7 @@ const Admin = sequelize.define('admin', {
 
     Hospital_id: {
         type: Sequelize.INTEGER(255),
-        allowNull: false
+        allowNull: true
     }
 
 }, {

@@ -4,9 +4,9 @@ import { sequelize } from "../db/dbConnect.js";
 //Create a DB Connection.
 
 const Patient=sequelize.define('patients',{
-Patients_Id:{
+Patients_id:{
     autoincrement:true,
-    type:Sequelize.INTEGER(255),
+    type:Sequelize.INTEGER,
     allowNull:true,
     primaryKey:true
 
@@ -41,9 +41,9 @@ Patients_FirstName:{
         name:"PRIMARY",
         unique:true,
         fields:[
-            {name:"Patients_Id"}
+            {name:"Patients_id"}
         ]
     }]
 })
 
-export default Patient
+export default Patient;

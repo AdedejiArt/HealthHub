@@ -1,5 +1,5 @@
-import Sequelize, { DATE } from "sequelize";
-import { sequelize } from "../db/dbConnection.js";
+//import Sequelize, { DATE } from "sequelize";
+import { sequelize } from "../db/dbConnect.js";
 
 const Record = sequelize.define('record', {
 

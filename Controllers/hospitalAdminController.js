@@ -1,5 +1,6 @@
 import Appointment from "../models/appointmentsModel.js";
 import Admin from "../models/hospitalAdminModel.js";
+import Hospital from "../models/Hospitalmodel.js";
 
 //id required important for router 
 
@@ -126,7 +127,9 @@ export async function viewAllAppointments (req,res){
             }
     }catch(err){
         if (err){
+            console.log(err)
             res.json({
+        
                 success:false,
                 message:"Oops! Something is wrong"
             })

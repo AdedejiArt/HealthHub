@@ -1,4 +1,33 @@
 import Appointment from "../models/appointmentsModel.js";
+import Hospital from "../models/Hospitalmodel.js";
+
+//Capture Appointents
+export async function addPatient(req,res){
+    try{
+        let Appoint=await Appointment.create(req.body);
+        if(Appoint){
+            res.status(200).json({
+                success:true,
+                data:Appoint
+            })
+        }else{
+          res.status(200).json({
+              success:true,
+              message:"Appointment could not be created successfully"
+          })
+
+        }
+    }catch (err){
+        console.log(err);
+    res.status(500).json({
+        
+        success:false,
+        message:"Opps.....Something is wrong"
+    })
+    }
+}
+
+
 
 //view appointments
 export async function viewAllAppointments (req,res){

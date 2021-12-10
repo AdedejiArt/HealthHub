@@ -4,7 +4,7 @@ import { authenticate } from "../middlewares/auth.js";
 
 const usersRouter=express.Router();
 //Add a user ----Sign Up
-usersRouter.post("/",authenticate,addUser);
+usersRouter.post("/",addUser);
 //Add a user ------Sign In
 usersRouter.post("/signin",SignIn);
 //View a User ------
